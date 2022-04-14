@@ -13,6 +13,7 @@ import com.example.cinema.model.Film
 import com.example.cinema.viewmodel.AppState
 import com.example.cinema.viewmodel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
+import java.lang.StringBuilder
 
 class MainFragment : Fragment() {
 
@@ -80,9 +81,20 @@ class MainFragment : Fragment() {
 
     private fun setData(film: Film) {
         binding.filmTitle.text = film.title
+        binding.filmGenre.text = film.genre
         binding.filmYear.text = film.createdAt.toString()
         binding.filmCountry.text = film.country
         binding.filmDescription.text = film.description
+
+        var tempString : StringBuilder = StringBuilder()
+        film.actors.forEach {
+            tempString.append(it.firstName)
+            tempString.append(" ")
+            tempString.append(it.lastName)
+            tempString.append(", ")
+        }
+
+        binding.filmActors.text = tempString.toString()
     }
 
 }
