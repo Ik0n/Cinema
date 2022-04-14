@@ -1,14 +1,19 @@
-package com.example.cinema
+package com.example.cinema.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.cinema.ui.main.MainFragment
+import com.example.cinema.R
+import com.example.cinema.databinding.MainActivityBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: MainActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+
+        binding = MainActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())
