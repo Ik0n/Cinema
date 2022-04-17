@@ -1,6 +1,6 @@
 package com.example.cinema.model
 
 interface Repository {
-    fun getFilmFromServer() : Film
-    fun getFilmFromLocalStorage() : Film
+    fun getFilmFromServer() : List<Film>
+    fun getFilmFromLocalStorage() : List<Film>
 }

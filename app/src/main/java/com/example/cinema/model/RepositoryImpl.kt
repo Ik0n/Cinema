@@ -1,11 +1,11 @@
 package com.example.cinema.model
 
 class RepositoryImpl : Repository {
-    override fun getFilmFromServer(): Film {
-        return Film()
+    override fun getFilmFromServer(): List<Film> {
+        return getFilms()
     }
 
-    override fun getFilmFromLocalStorage(): Film {
-        return Film()
+    override fun getFilmFromLocalStorage(): List<Film> {
+        return getFilms()
     }
 }

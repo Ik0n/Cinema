@@ -23,14 +23,11 @@ class MainViewModel(
         liveDataToObserve.value = AppState.Loading
         Thread {
             sleep(2000)
-            val flag = Random.nextInt(2) == 0
-            if (flag) {
-                liveDataToObserve.postValue(
-                    AppState.Success(repositoryImpl.getFilmFromLocalStorage())
-                )
-            } else {
-                liveDataToObserve.postValue(AppState.Error(Throwable("Erorr")))
-            }
+
+            liveDataToObserve.postValue(
+                AppState.Success(repositoryImpl.getFilmFromLocalStorage())
+            )
+
         }.start()
     }
 
