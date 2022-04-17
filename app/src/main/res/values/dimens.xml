@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="film_title_text_size">35sp</dimen>
+    <dimen name="film_year_text_size">25sp</dimen>
+    <dimen name="film_country_text_size">15sp</dimen>
+    <dimen name="film_description_text_size">18sp</dimen>
+    <dimen name="film_description_margin_top">15dp</dimen>
+    <dimen name="film_description_padding">20dp</dimen>
+</resources>
